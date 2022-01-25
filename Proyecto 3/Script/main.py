@@ -1,0 +1,10 @@
+fichero = open('C:/Users/abiga/OneDrive/Escritorio/Fuente.txt')
+f = open('C:/Users/abiga/OneDrive/Escritorio/Binario.txt', 'w')
+numero = 1;
+while numero <= 19:
+    fichero.readline()
+    numero = numero + 1
+while fichero.readline():
+    valor = 1677721.6 * float(fichero.readline()[23:34])
+    binario = bin(int(valor))[2:]
+    f.write(binario.zfill(32) + '\n')
