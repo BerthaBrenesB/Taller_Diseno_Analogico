@@ -1,0 +1,48 @@
+# Reading pref.tcl
+# do ParteDigital1_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Proyecto\ 3 {C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Proyecto 3/multiplicacion_punto_fijo.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:38:21 on Jan 24,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Proyecto 3" C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Proyecto 3/multiplicacion_punto_fijo.sv 
+# -- Compiling module multiplicacion_punto_fijo
+# 
+# Top level modules:
+# 	multiplicacion_punto_fijo
+# End time: 20:38:21 on Jan 24,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Proyecto\ 3 {C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Proyecto 3/multiplicacion_punto_fijo_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:38:21 on Jan 24,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Proyecto 3" C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Proyecto 3/multiplicacion_punto_fijo_tb.sv 
+# -- Compiling module multiplicacion_punto_fijo_tb
+# 
+# Top level modules:
+# 	multiplicacion_punto_fijo_tb
+# End time: 20:38:21 on Jan 24,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.multiplicacion_punto_fijo_tb
+# vsim work.multiplicacion_punto_fijo_tb 
+# Start time: 20:38:27 on Jan 24,2022
+# Loading sv_std.std
+# Loading work.multiplicacion_punto_fijo_tb
+# Loading work.multiplicacion_punto_fijo
+# ** Warning: (vsim-3015) [PCDPC] - Port size (65) does not match connection size (33) for port 's'. The port definition is at: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Proyecto 3/multiplicacion_punto_fijo.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /multiplicacion_punto_fijo_tb/multiplicador File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Proyecto 3/multiplicacion_punto_fijo_tb.sv Line: 6
+add wave -position end  sim:/multiplicacion_punto_fijo_tb/A
+add wave -position end  sim:/multiplicacion_punto_fijo_tb/B
+add wave -position end  sim:/multiplicacion_punto_fijo_tb/S
+run 100
+# Iniiciando la simulacion
+# End time: 20:38:51 on Jan 24,2022, Elapsed time: 0:00:24
+# Errors: 0, Warnings: 1

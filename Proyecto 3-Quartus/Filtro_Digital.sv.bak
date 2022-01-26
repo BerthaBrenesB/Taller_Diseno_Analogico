@@ -1,0 +1,11 @@
+module Filtro_Digital(input logic [31:0]xd, output logic s);
+
+	reg [31:0] max;
+	reg x, w;
+	reg [31:0] A;
+	reg [31:0] B;
+	suma_punto_fijo sumador(xd,max,x);
+	A = 32'b00000000000000011000000000000000;
+	B = 32'b00000000000000110100000000000000;
+	suma_punto_fijo sumador2(x,A,w);
+endmodule

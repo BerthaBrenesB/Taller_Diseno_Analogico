@@ -1,0 +1,22 @@
+# system info suma_flotante on 2022.01.20.09:26:39
+system_info:
+name,value
+DEVICE,5CGXFC7C7F23C8
+DEVICE_FAMILY,Cyclone V
+GENERATION_ID,1642692398
+#
+#
+# Files generated for suma_flotante on 2022.01.20.09:26:39
+files:
+filepath,kind,attributes,module,is_top
+simulation/suma_flotante.v,VERILOG,,suma_flotante,true
+simulation/submodules/fpoint2_combi.vhd,VHDL,,fpoint2_combi,false
+simulation/submodules/FPMinMaxFused/FPMinMaxFused.vhd,VHDL,,fpoint2_combi,false
+simulation/submodules/FPCompareFused/FPCompareFused.vhd,VHDL,,fpoint2_combi,false
+simulation/submodules/FPNeg_Abs/FPNeg.vhd,VHDL,,fpoint2_combi,false
+simulation/submodules/FPNeg_Abs/FPAbs.vhd,VHDL,,fpoint2_combi,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+suma_flotante.nios_custom_instr_floating_point_2_combi_0,fpoint2_combi

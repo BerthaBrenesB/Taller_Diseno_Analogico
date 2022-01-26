@@ -1,0 +1,7 @@
+module latched_D(input D, input Enable, output Q, output Qbar);
+	always @(D or Enable)
+		if(Enable) begin
+			Q <= D;
+			Qbar <= ~D;
+		end
+endmodule

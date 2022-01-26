@@ -1,0 +1,35 @@
+module multiplicacion_punto_fijo(input logic[31:0]a,input logic [31:0]b, output logic [31:0]s);
+	
+	logic [31:0] A;
+	logic [15:0] couts;
+	logic dev;
+	reg [30:15] se;
+	logic [31:0] B;
+	initial begin
+		if(!b[31]) begin
+			couts = a[14:0] + b[14:0];
+			se  = a[30:15] + b[30:15];
+			s[31] = a[31] + b[31];
+			s[30:15] = se + couts[15] ;
+			s[14:0] = couts[14:0];
+		end
+		else begin
+		if(a[31]==1) begin
+				A = ~a + 32'b00000000000000000000000000000001;
+				couts = A[14:0] + b[14:0];
+				se  = A[30:15] + b[30:15];
+				s[31] = A[31] + b[31];
+				s[30:15] = se + couts[15] ;
+				s[14:0] = couts[14:0]; 
+			end
+			else begin
+				B = ~b + 32'b00000000000000000000000000000001;
+				couts = a[14:0] + B[14:0];
+				se  = a[30:15] + B[30:15];
+				s[31] = a[31] + B[31];
+				s[30:15] = se + couts[15] ;
+				s[14:0] = couts[14:0];
+			end
+		end
+	end	
+endmodule

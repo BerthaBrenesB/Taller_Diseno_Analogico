@@ -1,0 +1,13 @@
+module suma_punto_fijo(input [31:0] a,input [31:0] b, output [32:0] s, output cout);
+	
+	always @(a or b)
+		if(!b[31])
+			assign {cout,s} = a + b + cin;
+		else
+			if(a[31]==1)
+				assign A = ~a + 32'b0000 0000 0000 0000 0000 0000 0000 0001;
+				assign s= A	+ b ; 
+			else
+				assign B = ~b + 32'b0000 0000 0000 0000 0000 0000 0000 0001;
+				assign s= B	+ a ;
+endmodule

@@ -1,0 +1,15 @@
+module Filtro_Digital_tb;
+	reg [31:0]xn;
+	reg salida;
+	int fd;
+	initial begin
+		$display("Iniiciando la simulacion");
+	
+		xn = 32'b00000000000000011000000000000000;
+		fd = $open("./result.txt","w");
+		Filtro_Digital frr(xn,salida);
+		$fwrite(fd, salida);
+		$fclose(fd);
+
+	end
+endmodule

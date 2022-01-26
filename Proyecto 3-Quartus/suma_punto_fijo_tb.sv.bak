@@ -1,0 +1,22 @@
+module suma_punto_fijo_tb
+	reg [31:0] A;
+	reg [31:0] B;
+	reg [31:0] S;
+	
+	 suma_punto_fijo sumador(A,B,S);
+	
+	initial begin
+	$display("Iniiciando la simulacion");
+	// 9
+	A = 4'b0 000 0000 0000 0001 1000 0000 0000 0000;
+	B = 4'b0 000 0000 0000 0011 0100 0000 0000 0000;
+	#20
+	assert (S == 4'b0 000 0000 0000 0100 1100 0000 0000 0000) else  $error("test failed for input combination 1.5 3.25");
+	
+	A = 4'b0 000 0000 0000 0001 1000 0000 0000 0000;
+	B = 4'b1 000 0000 0111 1100 1100 0000 0000 0000;
+	#20
+	assert (S == 4'b1 000 0000 0111 1110 0100 0000 0000 0000) else  $error("test failed for input combination 1.5 -3.25");
+	
+	end
+endmodule
